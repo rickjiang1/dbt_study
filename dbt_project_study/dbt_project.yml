@@ -2,6 +2,16 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
+
+#What project.yml file do
+
+#Project identity
+#File structure (where things live)
+#Model behavior (materialization, schema, tags, etc.)
+#Global configs (vars, seeds, snapshots, tests)
+#Hooks & macros behavior
+
+
 name: 'dbt_project_study'
 version: '1.0.0'
 

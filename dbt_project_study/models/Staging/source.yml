@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: Landing                # logical name (you choose)
+    database: dbt_project       # your database
+    schema: Landing             # your schema
+
+    tables:
+      - name: lnd_customer
+      - name: lnd_customeraddress
+      - name: lnd_productmodel

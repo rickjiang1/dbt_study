@@ -1,1 +1,1 @@
-SELECT * FROM [AdventureWorksLT2017].[SalesLT].[Address]
+SELECT * FROM [AdventureWorksLT2017].[SalesLT].[Address] where CountryRegion = '{{var("country")}}'

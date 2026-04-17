@@ -1,0 +1,45 @@
+models:
+  - name: lnd_address
+    config:
+      pre-hook: "insert into dbo.dbt_model_audit (model_name) values ('lnd_address_insert')"
+      post_hook: "insert into dbo.dbt_model_audit (model_name) values ('lnd_address_delete')"
+    columns:
+    - name: AddressLine1
+      tests:
+        - not_null
+    - name: AddressID
+      tests:
+        - unique
+    - name: CountryRegion
+      tests:
+        - accepted_values:
+            values: ['United Kingdom','Canada','United States']
+
+  - name: lnd_customeraddress
+    columns: 
+    - name: customerid
+      data_tests:
+        - relationships:
+            arguments:
+              to: ref('lnd_customer')
+              field: CustomerID    
+        - dbt_utils.not_accepted_values:
+              arguments:
+                values: ['99999']
+
+  - name: lnd_salesorderdetail          
+    columns:
+    - name: UnitPrice
+      data_tests:
+        - less_than_999:
+           description: "This is a test"
+   
+    - name: SalesOrderID
+      data_tests:
+        - testing_relationship:
+            arguments:
+              to: ref('lnd_salesorderhearder')
+              field: SalesOrderID
+
+  - name: lnd_customer
+    description: '{{ doc("doc_Customer") }}'

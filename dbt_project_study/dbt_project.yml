@@ -48,3 +48,6 @@ models:
     Staging:
       +schema: Staging
       +materialized: view
+
+vars:
+  country: 'United States'

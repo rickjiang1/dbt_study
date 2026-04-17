@@ -1,3 +1,4 @@
+#Landing Schema
 models:
   - name: lnd_address
     config:

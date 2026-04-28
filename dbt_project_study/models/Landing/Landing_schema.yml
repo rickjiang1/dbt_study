@@ -1,44 +1,63 @@
-#Landing Schema
+# Landing Schema
+# Landing Schema
 models:
   - name: lnd_address
     config:
       pre-hook: "insert into dbo.dbt_model_audit (model_name) values ('lnd_address_insert')"
-      post_hook: "insert into dbo.dbt_model_audit (model_name) values ('lnd_address_delete')"
+      post-hook: "insert into dbo.dbt_model_audit (model_name) values ('lnd_address_delete')"
     columns:
-    - name: AddressLine1
-      tests:
-        - not_null
-    - name: AddressID
-      tests:
-        - unique
-    - name: CountryRegion
-      tests:
-        - accepted_values:
-            values: ['United Kingdom','Canada','United States']
+      - name: AddressLine1
+        data_tests:
+          - not_null:
+              config:
+                alias: test_address_addressline1_not_null
+
+      - name: AddressID
+        data_tests:
+          - unique:
+              config:
+                alias: test_address_addressid_unique
+          - not_null:
+              config:
+                alias: test_AddressID_not_null
+
+      - name: CountryRegion
+        data_tests:
+          - accepted_values:
+              values: ['United Kingdom', 'Canada', 'United States']
+              config:
+                alias: CustomerAddress_Accepted_Value_test
 
   - name: lnd_customeraddress
-    columns: 
-    - name: customerid
-      data_tests:
-        - relationships:
-            arguments:
+    columns:
+      - name: customerid
+        data_tests:
+          - relationships:
               to: ref('lnd_customer')
-              field: CustomerID    
-        - dbt_utils.not_accepted_values:
+              field: CustomerID
+              config:
+                alias: CustomerAddress_relationship_test
+
+          - dbt_utils.not_accepted_values:
+              config:
+                alias: CustomerAddress_not_accepted_test
               arguments:
                 values: ['99999']
 
-  - name: lnd_salesorderdetail          
+  - name: lnd_salesorderdetail
     columns:
-    - name: UnitPrice
-      data_tests:
-        - less_than_999:
-           description: "This is a test"
-   
-    - name: SalesOrderID
-      data_tests:
-        - testing_relationship:
-            arguments:
+      - name: UnitPrice
+        description: "This is a test"
+        data_tests:
+          - less_than_999:
+              config:
+                alias: less_than_999_test
+
+      - name: SalesOrderID
+        data_tests:
+          - testing_relationship:
+              config:
+                alias: Sales_Order_test
               to: ref('lnd_salesorderhearder')
               field: SalesOrderID
 

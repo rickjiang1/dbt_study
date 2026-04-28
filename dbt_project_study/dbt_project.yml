@@ -48,6 +48,14 @@ models:
     Staging:
       +schema: Staging
       +materialized: view
-      +tag: Staging
+      +tags: ["Staging"]
 vars:
   country: 'United States'
+
+data_tests:
+  +store_failures: true
+  +store_failures_as: view
+  +schema: Data_audit
+
+on-run-end:
+  - "{{ after_test_only(results) }}"

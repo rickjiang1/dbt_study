@@ -1,0 +1,88 @@
+[32m2026-04-28 13:55:36 -0400[0m - dagster - [34mDEBUG[0m - dbt_run_all_job - ab5acce6-87b6-45f4-a216-96d0fc60b2c5 - 8304 - LOGS_CAPTURED - Started capturing logs in process (pid: 8304).
+[32m2026-04-28 13:55:36 -0400[0m - dagster - [34mDEBUG[0m - dbt_run_all_job - ab5acce6-87b6-45f4-a216-96d0fc60b2c5 - 8304 - dbt_project_assets - STEP_START - Started execution of step "dbt_project_assets".
+[32m2026-04-28 13:55:36 -0400[0m - dagster - [34mINFO[0m - dbt_run_all_job - ab5acce6-87b6-45f4-a216-96d0fc60b2c5 - dbt_project_assets - A dbt subsetted execution is not being performed. Using the default dbt selection arguments `['--select', 'fqn:*']`.
+[32m2026-04-28 13:55:48 -0400[0m - dagster - [34mINFO[0m - dbt_run_all_job - ab5acce6-87b6-45f4-a216-96d0fc60b2c5 - dbt_project_assets - Copying `C:\dbt_study\dbt_project_study\target\partial_parse.msgpack` to `C:\dbt_study\dbt_project_study\target\dbt_project_assets-ab5acce-a70d0c7\partial_parse.msgpack` to take advantage of partial parsing.
+[32m2026-04-28 13:55:48 -0400[0m - dagster - [34mINFO[0m - dbt_run_all_job - ab5acce6-87b6-45f4-a216-96d0fc60b2c5 - dbt_project_assets - Running dbt command: `C:\Users\JintaoJiang\AppData\Local\Programs\Python\Python310\Scripts\dbt.exe run --threads 1 --profile dbt_project_study --target dev --select fqn:*`.
+[32m2026-04-28 13:57:27 -0400[0m - dagster - [34mDEBUG[0m - dbt_run_all_job - ab5acce6-87b6-45f4-a216-96d0fc60b2c5 - 8304 - dbt_project_assets - STEP_OUTPUT - Yielded output "Landing__lnd_productdescription" of type "Nothing". (Type check passed).
+[32m2026-04-28 13:57:27 -0400[0m - dagster - [34mDEBUG[0m - dbt_run_all_job - ab5acce6-87b6-45f4-a216-96d0fc60b2c5 - 8304 - dbt_project_assets - ASSET_MATERIALIZATION - Materialized value Landing lnd_productdescription.
+[32m2026-04-28 13:57:27 -0400[0m - dagster - [34mDEBUG[0m - dbt_run_all_job - ab5acce6-87b6-45f4-a216-96d0fc60b2c5 - 8304 - dbt_project_assets - STEP_OUTPUT - Yielded output "Landing__lnd_productmodel" of type "Nothing". (Type check passed).
+[32m2026-04-28 13:57:27 -0400[0m - dagster - [34mDEBUG[0m - dbt_run_all_job - ab5acce6-87b6-45f4-a216-96d0fc60b2c5 - 8304 - dbt_project_assets - ASSET_MATERIALIZATION - Materialized value Landing lnd_productmodel.
+[32m2026-04-28 13:57:27 -0400[0m - dagster - [34mDEBUG[0m - dbt_run_all_job - ab5acce6-87b6-45f4-a216-96d0fc60b2c5 - 8304 - dbt_project_assets - STEP_OUTPUT - Yielded output "Landing__lnd_productmodelproductdescription" of type "Nothing". (Type check passed).
+[32m2026-04-28 13:57:27 -0400[0m - dagster - [34mDEBUG[0m - dbt_run_all_job - ab5acce6-87b6-45f4-a216-96d0fc60b2c5 - 8304 - dbt_project_assets - ASSET_MATERIALIZATION - Materialized value Landing lnd_productmodelproductdescription.
+[32m2026-04-28 13:58:05 -0400[0m - dagster - [34mDEBUG[0m - dbt_run_all_job - ab5acce6-87b6-45f4-a216-96d0fc60b2c5 - 8304 - dbt_project_assets - STEP_OUTPUT - Yielded output "Landing__lnd_salesorderhearder" of type "Nothing". (Type check passed).
+[32m2026-04-28 13:58:05 -0400[0m - dagster - [34mDEBUG[0m - dbt_run_all_job - ab5acce6-87b6-45f4-a216-96d0fc60b2c5 - 8304 - dbt_project_assets - ASSET_MATERIALIZATION - Materialized value Landing lnd_salesorderhearder.
+[32m2026-04-28 13:58:05 -0400[0m - dagster - [34mDEBUG[0m - dbt_run_all_job - ab5acce6-87b6-45f4-a216-96d0fc60b2c5 - 8304 - dbt_project_assets - STEP_OUTPUT - Yielded output "Staging__stg_customer" of type "Nothing". (Type check passed).
+[32m2026-04-28 13:58:06 -0400[0m - dagster - [34mDEBUG[0m - dbt_run_all_job - ab5acce6-87b6-45f4-a216-96d0fc60b2c5 - 8304 - dbt_project_assets - ASSET_MATERIALIZATION - Materialized value Staging stg_customer.
+[32m2026-04-28 13:58:06 -0400[0m - dagster - [34mINFO[0m - dbt_run_all_job - ab5acce6-87b6-45f4-a216-96d0fc60b2c5 - dbt_project_assets - Finished dbt command: `C:\Users\JintaoJiang\AppData\Local\Programs\Python\Python310\Scripts\dbt.exe run --threads 1 --profile dbt_project_study --target dev --select fqn:*`.
+[32m2026-04-28 13:58:06 -0400[0m - dagster - [34mERROR[0m - [31mdbt_run_all_job - ab5acce6-87b6-45f4-a216-96d0fc60b2c5 - 8304 - dbt_project_assets - STEP_FAILURE - Execution of step "dbt_project_assets" failed.
+
+dagster_dbt.errors.DagsterDbtCliRuntimeError: The dbt CLI process with command
+
+`C:\Users\JintaoJiang\AppData\Local\Programs\Python\Python310\Scripts\dbt.exe run --threads 1 --profile dbt_project_study --target dev --select fqn:*`
+
+failed with exit code `1`. Check the stdout in the Dagster compute logs for the full information about the error, or view the dbt debug log: C:\dbt_study\dbt_project_study\target\dbt_project_assets-ab5acce-a70d0c7\dbt.log.
+
+Errors parsed from dbt logs:
+
+[31mUnhandled error while executing target\dbt_project_assets-ab5acce-a70d0c7\run\dbt_project_study\models\Landing\lnd_address.sql[0m
+('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A timeout occurred while waiting for memory resources to execute the query in resource pool 'internal' (1). Rerun the query. (8645) (SQLMoreResults); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+
+1 of 9 ERROR creating sql table model Landing.lnd_address ...................... [[31mERROR[0m in 28.70s]
+
+[31mUnhandled error while executing target\dbt_project_assets-ab5acce-a70d0c7\run\dbt_project_study\models\Landing\lnd_customer.sql[0m
+('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A timeout occurred while waiting for memory resources to execute the query in resource pool 'internal' (1). Rerun the query. (8645) (SQLMoreResults); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+
+2 of 9 ERROR creating sql table model Landing.lnd_customer ..................... [[31mERROR[0m in 31.73s]
+
+[31mUnhandled error while executing target\dbt_project_assets-ab5acce-a70d0c7\run\dbt_project_study\models\Landing\lnd_customeraddress.sql[0m
+('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A timeout occurred while waiting for memory resources to execute the query in resource pool 'internal' (1). Rerun the query. (8645) (SQLMoreResults); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+
+3 of 9 ERROR creating sql table model Landing.lnd_customeraddress .............. [[31mERROR[0m in 26.66s]
+
+[31mUnhandled error while executing target\dbt_project_assets-ab5acce-a70d0c7\run\dbt_project_study\models\Landing\lnd_salesorderdetail.sql[0m
+('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A timeout occurred while waiting for memory resources to execute the query in resource pool 'internal' (1). Rerun the query. (8645) (SQLMoreResults); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+
+7 of 9 ERROR creating sql table model Landing.lnd_salesorderdetail ............. [[31mERROR[0m in 25.64s]
+
+[31mFailure in model lnd_address (models\Landing\lnd_address.sql)[0m
+
+  ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A timeout occurred while waiting for memory resources to execute the query in resource pool 'internal' (1). Rerun the query. (8645) (SQLMoreResults); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+
+[31mFailure in model lnd_customer (models\Landing\lnd_customer.sql)[0m
+
+  ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A timeout occurred while waiting for memory resources to execute the query in resource pool 'internal' (1). Rerun the query. (8645) (SQLMoreResults); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+
+[31mFailure in model lnd_customeraddress (models\Landing\lnd_customeraddress.sql)[0m
+
+  ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A timeout occurred while waiting for memory resources to execute the query in resource pool 'internal' (1). Rerun the query. (8645) (SQLMoreResults); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+
+[31mFailure in model lnd_salesorderdetail (models\Landing\lnd_salesorderdetail.sql)[0m
+
+  ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]A timeout occurred while waiting for memory resources to execute the query in resource pool 'internal' (1). Rerun the query. (8645) (SQLMoreResults); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+
+Stack Trace:
+  File "C:\Users\JintaoJiang\AppData\Local\Programs\Python\Python310\lib\site-packages\dagster\_core\execution\plan\execute_plan.py", line 247, in dagster_event_sequence_for_step
+    yield from check.generator(step_events)
+  File "C:\Users\JintaoJiang\AppData\Local\Programs\Python\Python310\lib\site-packages\dagster\_core\execution\plan\execute_step.py", line 505, in core_dagster_event_sequence_for_step
+    for user_event in _step_output_error_checked_user_event_sequence(
+  File "C:\Users\JintaoJiang\AppData\Local\Programs\Python\Python310\lib\site-packages\dagster\_core\execution\plan\execute_step.py", line 184, in _step_output_error_checked_user_event_sequence
+    for user_event in user_event_sequence:
+  File "C:\Users\JintaoJiang\AppData\Local\Programs\Python\Python310\lib\site-packages\dagster\_core\execution\plan\execute_step.py", line 88, in _process_asset_results_to_events
+    for user_event in user_event_sequence:
+  File "C:\Users\JintaoJiang\AppData\Local\Programs\Python\Python310\lib\site-packages\dagster\_core\execution\plan\compute.py", line 188, in execute_core_compute
+    for step_output in _yield_compute_results(step_context, inputs, compute_fn, compute_context):
+  File "C:\Users\JintaoJiang\AppData\Local\Programs\Python\Python310\lib\site-packages\dagster\_core\execution\plan\compute.py", line 157, in _yield_compute_results
+    for event in iterate_with_context(
+  File "C:\Users\JintaoJiang\AppData\Local\Programs\Python\Python310\lib\site-packages\dagster\_utils\__init__.py", line 394, in iterate_with_context
+    next_output = next(iterator)
+  File "C:\dbt_study\dbt_project_study\dagster-learning\dagster_learning\assets.py", line 9, in dbt_project_assets
+    yield from dbt.cli(
+  File "C:\Users\JintaoJiang\AppData\Local\Programs\Python\Python310\lib\site-packages\dagster_dbt\core\dbt_event_iterator.py", line 215, in __next__
+    return next(self._inner_iterator)
+  File "C:\Users\JintaoJiang\AppData\Local\Programs\Python\Python310\lib\site-packages\dagster_dbt\core\dbt_cli_invocation.py", line 286, in _stream_asset_events
+    for event in self.stream_raw_events():
+  File "C:\Users\JintaoJiang\AppData\Local\Programs\Python\Python310\lib\site-packages\dagster_dbt\core\dbt_cli_invocation.py", line 379, in stream_raw_events
+    self._raise_on_error()
+  File "C:\Users\JintaoJiang\AppData\Local\Programs\Python\Python310\lib\site-packages\dagster_dbt\core\dbt_cli_invocation.py", line 470, in _raise_on_error
+    raise error
+[0m

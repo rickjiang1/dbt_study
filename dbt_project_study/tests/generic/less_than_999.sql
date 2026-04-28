@@ -1,6 +1,6 @@
 {% test less_than_999(model, column_name) %}
 
-{{ config(severity = 'warn') }}
+{{ config(severity = 'error') }}
 
 with validation as (
 

@@ -1,0 +1,17 @@
+Running with dbt=1.11.8
+Registered adapter: sqlserver=1.9.0
+Found 9 models, 9 data tests, 1 operation, 1 snapshot, 3 sources, 661 macros
+
+Concurrency: 1 threads (target='dev')
+
+1 of 1 START sql view model Staging.stg_customer ............................... [RUN]
+1 of 1 OK created sql view model Staging.stg_customer .......................... [[32mOK[0m in 3.87s]
+
+1 of 1 START hook: dbt_project_study.on-run-end.0 .............................. [RUN]
+1 of 1 OK hook: dbt_project_study.on-run-end.0 ................................. [[32mOK[0m in 0.04s]
+
+Finished running 1 project hook, 1 view model in 0 hours 0 minutes and 7.67 seconds (7.67s).
+
+[32mCompleted successfully[0m
+
+Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2

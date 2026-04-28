@@ -1,0 +1,10 @@
+snapshots:
+  - name: Customer_snapshot
+    relation: source('src_Landing', 'lnd_customer')
+    config:
+      schema: snapshots
+      database: dbt_project
+      unique_key: Customerid
+      strategy: timestamp
+      updated_at: ModifiedDate
+      dbt_valid_to_current: "CAST('9999-12-31' AS Date)" # Specifies that current records should have `dbt_valid_to` set to `'9999-12-31'` instead of `NULL`.

@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: Landing                # logical name (you choose)
+  - name: src_Landing                # logical name (you choose)
     database: dbt_project       # your database
     schema: Landing             # your schema
 

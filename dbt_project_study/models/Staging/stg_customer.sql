@@ -1,4 +1,4 @@
 SELECT
 *,
 '{{invocation_id}}' as run_ID
-FROM {{ source('Landing', 'lnd_customer') }}
+FROM {{ source('src_Landing', 'lnd_customer') }}
